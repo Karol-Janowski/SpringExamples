@@ -1,5 +1,8 @@
-package pl.zajavka;
+package pl.zajavka.code;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AnotherInjectedBean {
 
     public AnotherInjectedBean() {
