@@ -6,5 +6,9 @@ public class Main {
         // convention over configuration
         // dependency injection
         // inversion of control
+
+        // Spring Bean - obiekt zarzadzany przez Spring IoC Container
+        // IoC - Inversion of control
+        // DI - Dependency Injection
     }
 }
