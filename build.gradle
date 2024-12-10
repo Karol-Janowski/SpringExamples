@@ -17,6 +17,13 @@ ext {
 
 
 dependencies {
+
+    implementation "org.springframework:spring-core:$springVersion"
+    implementation "org.springframework:spring-beans:$springVersion"
+    implementation "org.springframework:spring-context:$springVersion"
+    implementation "org.springframework:spring-context-support:$springVersion"
+    implementation "org.springframework:spring-expression:$springVersion"
+
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.3'
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
