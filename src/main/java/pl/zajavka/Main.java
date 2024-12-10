@@ -17,6 +17,8 @@ public class Main {
         // Konfiguracja jawna
         // - pliki xml
         // - oparte o jave
+        // -- @Configuration
+        // -- @Bean
         // Konfiguracja niejawna/automatyczna
         // - Adnotacje
 
