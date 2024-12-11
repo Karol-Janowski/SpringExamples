@@ -2,7 +2,9 @@ package pl.zajavka;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import pl.zajavka.code.ExampleBean;
+import pl.zajavka.code.InjectedBean;
 import pl.zajavka.configuration.ExampleConfigurationClass;
 
 public class Main {
@@ -32,10 +34,20 @@ public class Main {
         // component scanning
         // automatic beans binding
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(ExampleConfigurationClass.class);
+        System.out.println("### Before context ###");
+        AbstractApplicationContext context = new AnnotationConfigApplicationContext(ExampleConfigurationClass.class);
+        System.out.println("### After context ###");
 
-        System.out.println("Context created");
-        ExampleBean exampleBean = context.getBean("exampleBean", ExampleBean.class);
-        exampleBean.exampleMethod();
+        System.out.println("### Before Bean Retrival");
+        InjectedBean bean = context.getBean(InjectedBean.class);
+        System.out.println("### After Bean retrival ###");
+
+        System.out.println("### Before calling method ###");
+        bean.someMethod();
+        System.out.println("### After calling method ###");
+
+        System.out.println("### Before context closing ###");
+        context.close();
+        System.out.println("### After context closing ###");
     }
 }
