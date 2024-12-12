@@ -12,9 +12,9 @@ import pl.zajavka.code.SomeCommonInterface;
 @ComponentScan(basePackageClasses = Main.class)
 public class ExampleConfigurationClass {
 
-    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
-    public InjectedBean injectedBean() {
-        return new InjectedBean();
-    }
+//    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
+//    public InjectedBean injectedBean() {
+//        return new InjectedBean();
+//    }
 }
 
